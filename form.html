@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Example</title>
+    <style>
+        .form-container {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-checkbox-label {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .form-submit {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            border: none;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .form-submit:hover {
+            background-color: #45a049;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email:</label>
+                <input class="form-input" type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="gender">Gender:</label>
+                <select class="form-select" id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="message">Message:</label>
+                <textarea class="form-textarea" id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label class="form-checkbox-label" for="subscribe">Subscribe to newsletter</label>
+            </div>
+
+            <div class="form-group">
+                <input class="form-submit" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+
+
+</html>
