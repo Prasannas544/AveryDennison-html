@@ -10,22 +10,55 @@
         @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
     </style>
     <style>
+        select.form-select {
+            border: 1px solid #ccc;
+            background: url('./chevron.png') no-repeat;
+            /* filter: hue-rotate(0deg); */
+            background-color: #fff;
+            background-size: 16px;
+            background-position: calc(100% - 20px) 10px;
+            background-repeat: no-repeat;
+        }
+
+        .custom-select {
+            position: relative;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            padding-right: 20px;
+            /* Add space for the arrow */
+        }
+
+        .custom-select:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            /* Adjust the position of the arrow */
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            /* Define the shape of the arrow */
+            border-right: 5px solid transparent;
+            border-top: 5px solid #000;
+            /* Change the color of the arrow here */
+            pointer-events: none;
+            /* Ensure the arrow doesn't interfere with the select functionality */
+        }
+
         body {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            width: 99vw;
-            height: 100vh;
+            overflow-x: hidden;
         }
 
         .section1 {
             width: 100%;
-            height: 95%;
-            background: #000;
             background-image: url('./sec1bg_md.png');
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
-
         }
 
         .section1 .logo {
@@ -65,6 +98,7 @@
             margin-right: 140px;
         }
 
+
         .section1 .text .img p {
             text-align: center;
             font: normal normal normal 20px/24px Arimo;
@@ -87,10 +121,10 @@
 
         .section2 {
             width: 100%;
-            height: 81%;
+            height: 100%;
             background: #fff;
             background-image: url('./sec2bg_md.png');
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
         }
 
@@ -151,13 +185,12 @@
         .section3 {
             width: 100%;
             height: 100%;
-            background: #E5E5E5;
             display: flex;
+            flex-direction: row;
         }
 
         .section3 .left {
             width: 35%;
-            height: 100%;
             background-image: url('./bgs3.png');
             background-repeat: no-repeat;
             background-size: cover;
@@ -166,6 +199,8 @@
         .section3 .right {
             width: 65%;
             padding: 6rem 6rem;
+            background: #E5E5E5;
+
         }
 
         .section3 .right h1 {
@@ -253,6 +288,7 @@
             /* gap: 1rem; */
         }
 
+
         .footer_container .alter {
             display: flex;
             flex-direction: column;
@@ -293,6 +329,10 @@
             color: #848484;
             opacity: 1;
             padding: 1rem;
+        }
+
+        .footer_container_mobile {
+            display: none;
         }
 
 
@@ -367,6 +407,35 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        #tickwhite {
+            width: 38px;
+            height: 51px;
+        }
+
+        #shieldwhite {
+            width: 40px;
+            height: 47px;
+        }
+
+        #glasswhite {
+            width: 60px;
+            height: 60px;
+        }
+
+        #qua {
+            width: 51px;
+            height: 70px;
+        }
+
+        #mcq {}
+
+        #exp {}
+
+        #dur {
+            width: 59px;
+            height: 70px;
+        }
     </style>
 
     <style>
@@ -424,9 +493,6 @@
             opacity: 1;
         }
 
-
-
-
         .form-label {
             display: block;
             margin-bottom: 5px;
@@ -459,6 +525,7 @@
             opacity: 1;
             background: #FFFFFF 0% 0% no-repeat padding-box;
         }
+
 
         .form-textarea {
             width: 100%;
@@ -509,6 +576,507 @@
             background-color: #cc4400;
         }
     </style>
+    <style>
+        @media only screen and (max-width: 600px) {
+            #tickwhite {
+                width: 18px;
+                height: 25px;
+            }
+
+            #shieldwhite {
+                width: 19px;
+                height: 23px;
+            }
+
+            #glasswhite {
+                width: 28px;
+                height: 29px;
+            }
+
+            #qua {
+                width: 32px;
+                height: 44px;
+            }
+
+            #mcq {
+                width: 40px;
+                height: 40px;
+            }
+
+            #exp {
+                width: 40px;
+                height: 40px;
+            }
+
+            #dur {
+                width: 36px;
+                height: 44px;
+            }
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+
+            .section1 {
+                /* height: 100%; */
+                width: 100%;
+                height: 100vh;
+                background-image: url('./sec1bg_sm.png');
+            }
+
+            .section1 .logo {
+                width: 80%;
+                padding: 16px 0px 0px 24px;
+            }
+
+            .section1 .text {
+                padding: 1rem 1rem;
+                width: 100%;
+            }
+
+
+            .section1 .text h1 {
+                text-align: left;
+                font: normal normal normal 21px/24px Arimo;
+                letter-spacing: 0px;
+                color: #000000;
+                opacity: 1;
+                margin-top: 0;
+            }
+
+            .section1 .text p {
+                width: 75%;
+                text-align: left;
+                font: normal normal 300 14px/16px Arimo;
+                letter-spacing: 0px;
+                color: #292929;
+                opacity: 1;
+            }
+
+            .section1 .text .stickers {
+                display: flex;
+            }
+
+            .section1 .text .img {
+                display: flex;
+                flex-direction: column;
+                margin-right: 40px;
+            }
+
+            .section1 .text .img p {
+                text-align: center;
+                font: normal normal normal 10px/12px Arimo;
+                letter-spacing: 0px;
+                color: #5D5D5D;
+                opacity: 1;
+            }
+
+            .section1 .text .img .img-circle {
+                background-color: #000000;
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+            .section2 {
+                width: 100%;
+                margin-top: 600px;
+                height: 75vh;
+                background: #fff;
+                background-image: url('./sec2bg_sm.png');
+                background-size: contain;
+            }
+
+            .section2 .left {
+                width: 100%;
+                padding: 1rem;
+                margin-top: -8rem;
+            }
+
+            .section2 h1 {
+                text-align: left;
+                font: normal normal 600 21px/20px Arimo;
+                letter-spacing: 0px;
+                color: #131313;
+                opacity: 1;
+                margin-bottom: 0;
+            }
+
+            .section2 h4 {
+                padding-top: 0.5rem;
+                text-align: left;
+                font: normal normal 800 14px/18px Arimo;
+                letter-spacing: 0px;
+                color: #131313;
+                opacity: 1;
+            }
+
+            .section2 p {
+                text-align: left;
+                width: 75%;
+                font: normal normal 300 14px/18px Arimo;
+                letter-spacing: 0px;
+                color: #131313;
+            }
+
+            .section2 .button_conatiner {
+                padding: 1rem;
+            }
+
+            .section2 .button_conatiner button {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .section2 .button {
+                background: #F26621 0% 0% no-repeat padding-box;
+                border-radius: 9px;
+                opacity: 1;
+                text-align: left;
+                font: normal normal 600 16px/16px Arimo;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                border: none;
+                padding: 8px 16px;
+            }
+
+
+            .section3 {
+                width: 100%;
+                /* height: 100%; */
+                background: #E5E5E5;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .section3 .left {
+                /* display: none; */
+                width: 100%;
+                height: 400px;
+
+                background-image: url('./bgs3sm.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .section3 .right {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .section3 .right h1 {
+                text-align: left;
+                font: normal normal 600 24px/28px Arimo;
+                letter-spacing: 0px;
+                color: #000000;
+                opacity: 1;
+            }
+
+            .section3 .button_container {
+                padding: 1rem 0rem;
+
+            }
+
+            .section3 .button {
+                background: #F26621 0% 0% no-repeat padding-box;
+                border-radius: 9px;
+                opacity: 1;
+                text-align: left;
+                font: normal normal 600 16px/16px Arimo;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                border: none;
+                padding: 0.8rem 1.2rem;
+            }
+
+            .section3 .mid {
+                display: flex;
+                flex-direction: column;
+                align-items: first baseline;
+                gap: 1rem;
+            }
+
+            .section3 .mid .point {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .section3 .mid .point .icon {
+                height: 68px;
+                width: 68px;
+                border-radius: 50%;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .section3 .mid .point .text {
+                width: 90%;
+
+            }
+
+            .section3 .mid .point .text p {
+                text-align: left;
+                font: normal normal 300 16px/28px Arimo;
+                letter-spacing: 0px;
+                color: #515151;
+                padding: 0;
+                margin: 0;
+            }
+
+            .footer_container {
+                display: none;
+            }
+
+            .footer_container_mobile {
+                display: block;
+            }
+
+            .footer_mobile {
+                width: 100%;
+                background: #000;
+                height: 65%;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                padding-top: 1rem;
+            }
+
+            .footer_mobile .faq {
+                display: flex;
+                flex-direction: column;
+                /* gap: 1rem; */
+            }
+
+            .footer_mobile img {
+                width: 120px;
+            }
+
+
+            .footer_mobile .alter {
+                display: flex;
+                flex-direction: column;
+                /* gap: 1rem; */
+            }
+
+
+            .footer_mobile p {
+                text-align: left;
+                font: normal normal 300 8px/10px Arimo;
+                letter-spacing: 0px;
+                color: #727272;
+                text-transform: capitalize;
+                opacity: 1;
+                margin: 0;
+            }
+
+            .footer_mobile h4 {
+                text-align: left;
+                font: normal normal 300 10px/12px Arimo;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                padding: 0;
+                margin: 0.3rem;
+
+            }
+
+            .footer_container_mobile .copyright {
+                text-align: center;
+                font: normal normal 300 8px/10px Arimo;
+                letter-spacing: 0px;
+                color: #848484;
+                opacity: 1;
+                padding: 0.5rem;
+            }
+
+            .modal {
+                display: none;
+                position: absolute;
+                z-index: 1;
+                -webkit-overflow-scrolling: hide;
+                top: 380px;
+                left: 3vw;
+                width: 364px;
+                height: 984px;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 14px 27px #00000017;
+                border-radius: 13px;
+                opacity: 1;
+
+            }
+
+
+            .slide-up {
+                transform: translateY(100%);
+                animation: slideUp 0.3s ease-in forwards;
+            }
+
+            .slide-down {
+                animation: slideDown 0.3s ease-in-out forwards;
+            }
+
+
+            @keyframes slideUp {
+                0% {
+                    transform: translateY(200%);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes slideDown {
+                0% {
+                    transform: translateY(0);
+                }
+
+                100% {
+                    transform: translateY(200%);
+                }
+            }
+
+            .form-container .header {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0.5rem;
+
+            }
+
+            .form-container .header h2 {
+                text-align: left;
+                font: normal normal 600 14px/4px Arimo;
+                letter-spacing: 0px;
+                color: #000000;
+                opacity: 1;
+                margin-bottom: 0;
+
+            }
+
+            .form-container .header p {
+                text-align: left;
+                font: normal normal 400 10px/14px Arimo;
+                letter-spacing: 0px;
+                color: #292929;
+                opacity: 1;
+
+            }
+
+            .form-checkbox {
+                width: 12px;
+                height: 12px;
+                border: 0.5px solid #5D5D5D;
+                border-radius: 4px;
+                margin-top: 0 !important;
+                opacity: 1;
+            }
+
+            .form-2 {
+                display: flex;
+                gap: 0;
+                flex-direction: column;
+
+            }
+
+            .form-group {
+                margin-bottom: px12;
+                width: 96%;
+            }
+
+            .form-group label {
+                text-align: left;
+                font: normal normal normal 10px/14px Arimo;
+                letter-spacing: 0px;
+                color: #292929;
+                opacity: 1;
+            }
+
+            .form-label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-input {
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                padding: 7px;
+                opacity: 1;
+                text-align: left;
+                font: normal normal 300 10px/14px Arimo;
+                letter-spacing: 0px;
+                color: #5D5D5D;
+                opacity: 1;
+
+            }
+
+            .form-select {
+                text-align: left;
+                font: normal normal 300 10px/14px Arimo;
+                letter-spacing: 0px;
+                color: #5D5D5D;
+
+                opacity: 1;
+                width: 106%;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                padding: 8px;
+                opacity: 1;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+            }
+
+            .form-textarea {
+                width: 100%;
+                padding: 0.5rem;
+                text-align: left;
+                font: normal normal 300 10px/14px Arimo;
+                letter-spacing: 0px;
+                color: #5D5D5D;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 0.25px solid #ccc;
+                border-radius: 8px;
+                opacity: 1;
+            }
+
+            .form-checkbox-label {
+                width: 108%;
+                text-align: left;
+                font: normal normal 300 10px/14px Arimo;
+                letter-spacing: 0px;
+                color: #292929;
+                margin-left: 6px;
+                opacity: 1;
+            }
+
+            .button_container button {
+
+                gap: 1rem;
+
+
+                font: normal normal 600 14px/16px Arimo;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer
+            }
+
+        }
+    </style>
 </head>
 
 <body class="main-content">
@@ -518,27 +1086,28 @@
                 <img src="./logo_dark.png" />
             </div>
 
+
             <div class="text">
                 <h1>Take your graphics protection to the next level woth DOL Max overlaminates</h1>
                 <p>Pair with MPI 1105 wrapping film for ramped up protection</p>
                 <div class="stickers">
                     <div class="img">
                         <div class="img-circle">
-                            <img src="./tick-white.png" style="width: 38px;height: 51px;" />
+                            <img id="tickwhite" src="./tick-white.png" />
                         </div>
-                        <p>fasf asf</p>
+                        <p>Maximum Durability</p>
                     </div>
                     <div class="img">
                         <div class="img-circle">
-                            <img src="./shield-white.png" style="width: 40px;height: 47px;" />
+                            <img id="shieldwhite" src="./shield-white.png" />
                         </div>
-                        <p>fasf asf</p>
+                        <p>Enhanced Appearance</p>
                     </div>
                     <div class="img">
                         <div class="img-circle">
-                            <img src="./glass-white.png" style="width: 60px;height: 60px;" />
+                            <img id="glasswhite" src="./glass-white.png" />
                         </div>
-                        <p>fasf asf</p>
+                        <p>High Gloss Finish</p>
                     </div>
                 </div>
             </div>
@@ -579,14 +1148,14 @@
     <div class="section3">
         <div class="left">
 
+
         </div>
         <div class="right">
             <h1>Why us?</h1>
             <div class="mid">
                 <div class="point">
                     <div class="icon">
-                        <img src="./qua.png" style="width: 51px;
-                        height: 70px;" />
+                        <img id="qua" src="./qua.png" />
                     </div>
                     <div class="text">
                         <p style='font-weight: 600;margin: 0;padding: 0;'> Quality Products </p>
@@ -597,7 +1166,7 @@
                     </div>
                 </div>
                 <div class="point">
-                    <div class="icon"> <img src="./mcq.png" /></div>
+                    <div class="icon"> <img id="mcq" src="./mcq.png" /></div>
                     <div class="text">
                         <p style='font-weight: 600;margin: 0;padding: 0;'> Multiple Options</p>
                         <p>
@@ -610,7 +1179,7 @@
                 </div>
                 <div class="point">
                     <div class="icon">
-                        <img src="./exp.png" />
+                        <img id="exp" src="./exp.png" />
                     </div>
                     <div class="text">
                         <p style='font-weight: 600;margin: 0;padding: 0;'> Expertise and Support</p>
@@ -623,8 +1192,7 @@
                 </div>
                 <div class="point">
                     <div class="icon">
-                        <img src="./dur.png" style="width: 59px;
-                        height: 70px;" />
+                        <img id="dur" src="./dur.png" />
                     </div>
                     <div class="text">
                         <p style='font-weight: 600;margin: 0;padding: 0;'>Durability Assurance</p>
@@ -655,6 +1223,7 @@
                 <h4>Why us</h4>
                 <h4>Enquire now</h4>
             </div>
+
             <div class="alter">
                 <p>Avery Dennison Overlaminate </p>
                 <p>Avery Dennison Overlaminate Films</p>
@@ -663,6 +1232,31 @@
                 <p>Avery Dennison DOL Max</p>
             </div>
             <div class="more_alter">
+                <p>Overlaminate </p>
+                <p>Overlaminate Films</p>
+                <p>Digital Overlaminate Films</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2023 Avery Dennison Label Packaging Material. All rights reserved.
+        </div>
+    </div>
+    <div class="footer_container_mobile">
+        <div class="footer_mobile">
+            <div class="logo">
+                <h4>DOL Max Overlaminate Films</h4>
+                <h4>Why us</h4>
+                <h4>Enquire now</h4>
+                <img src="./logowhite.png" />
+            </div>
+
+            <div class="alter">
+                <p>Avery Dennison Overlaminate </p>
+                <p>Avery Dennison Overlaminate Films</p>
+                <p>Avery Dennison Digital
+                    Overlaminate Films</p>
+                <p>Avery Dennison DOL Max</p>
                 <p>Overlaminate </p>
                 <p>Overlaminate Films</p>
                 <p>Digital Overlaminate Films</p>
@@ -709,7 +1303,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="state">State:</label>
-                            <select class="form-select" id="state" name="state">
+                            <select class="form-select custom-select" id="state" name="state">
                                 <option value="male" selected>California</option>
                                 <option value="female">Female</option>
                                 <option value="other">Other</option>
@@ -719,7 +1313,7 @@
 
                     <div class="form-group">
                         <label class="form-label" for="state">How would you describe yourself?</label>
-                        <select class="form-select" id="state" name="state">
+                        <select class="form-select custom-select" id="state" name="state">
                             <option value="male" selected>Installer</option>
                             <option value="female">Female</option>
                             <option value="other">Other</option>
@@ -727,7 +1321,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="state">Preferred Distributor:</label>
-                        <select class="form-select" id="state" name="state">
+                        <select class="form-select custom-select" id="state" name="state">
                             <option value="male" selected>Aerotect</option>
                             <option value="female">Female</option>
                             <option value="other">Other</option>
@@ -756,6 +1350,7 @@
             </div>
         </div>
     </div>
+
 </body>
 <script>
 
